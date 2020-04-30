@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B64937EE-7829-4A95-9C81-B3B6944A6111}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>POS_system</RootNamespace>
+    <AssemblyName>POS_system</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Lenovo\Desktop\Pos_Program\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C9A32A186CE0208D741D4BD0945024DDCB899ADB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>POS_system_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.19\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.19\Assemblies\v4.5.2\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Product.Designer.cs">
+      <DependentUpon>Add_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminMenu.Designer.cs">
+      <DependentUpon>adminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Barcode_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barcode_Print.Designer.cs">
+      <DependentUpon>Barcode_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat_group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat_group.Designer.cs">
+      <DependentUpon>Chat_group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Product.Designer.cs">
+      <DependentUpon>Delete_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_MyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_MyUser.Designer.cs">
+      <DependentUpon>Edit_MyUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Product.Designer.cs">
+      <DependentUpon>Edit_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bill_Item.cs" />
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="normalMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="normalMenu.Designer.cs">
+      <DependentUpon>normalMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pos_System.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pos_System.Designer.cs">
+      <DependentUpon>Pos_System.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportForManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForManager.Designer.cs">
+      <DependentUpon>ReportForManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_shop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_shop.Designer.cs">
+      <DependentUpon>Setting_shop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Userlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Userlogin.Designer.cs">
+      <DependentUpon>Setting_Userlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_Product.Designer.cs">
+      <DependentUpon>Show_Product.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_Product.resx">
+      <DependentUpon>Add_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminMenu.resx">
+      <DependentUpon>adminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barcode_Print.resx">
+      <DependentUpon>Barcode_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat_group.resx">
+      <DependentUpon>Chat_group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Product.resx">
+      <DependentUpon>Delete_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_MyUser.resx">
+      <DependentUpon>Edit_MyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Product.resx">
+      <DependentUpon>Edit_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="normalMenu.resx">
+      <DependentUpon>normalMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pos_System.resx">
+      <DependentUpon>Pos_System.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportForManager.resx">
+      <DependentUpon>ReportForManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_shop.resx">
+      <DependentUpon>Setting_shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Userlogin.resx">
+      <DependentUpon>Setting_Userlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Product.resx">
+      <DependentUpon>Show_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="POS_system_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Add_Product.datasource" />
+    <None Include="Properties\DataSources\adminMenu.datasource" />
+    <None Include="Properties\DataSources\Loginpage.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Common.StringUtility.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Authentication.MySqlNativePasswordPlugin.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Authentication.MySqlPemReader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Authentication.SecBuffer.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Authentication.SecHandle.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Authentication.SecPkgContext_Sizes.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Authentication.SECURITY_HANDLE.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Authentication.SECURITY_INTEGER.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.AuthenticationPluginConfigurationElement.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.BaseCommandInterceptor.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.BaseTableCache.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.CustomInstaller.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.InterceptorConfigurationElement.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Interceptors.BaseExceptionInterceptor.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Memcached.BinaryClient.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Memcached.Client.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Memcached.MemcachedException.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Memcached.TextClient.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlBulkLoader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientFactory.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientPermission.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientPermissionAttribute.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommand.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConfiguration.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConnection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlDataAdapter.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlDataReader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlError.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlException.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlHelper.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlParameter.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlParameterCollection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlSchemaCollection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlSchemaRow.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScript.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlSecurityPermission.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlStatementExecutedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlTrace.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlTransaction.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Replication.ReplicationRoundRobinServerGroup.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Replication.ReplicationServer.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Replication.ReplicationServerGroup.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.ReplicationConfigurationElement.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.ReplicationServerConfigurationElement.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.ReplicationServerGroupConfigurationElement.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.SchemaColumn.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Resources.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.ResourcesX.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlConversionException.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlDateTime.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlDecimal.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlGeometry.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.Common.SchemaManager.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.Personalization.MySqlPersonalizationProvider.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.Profile.MySQLProfileProvider.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.Security.MySQLMembershipProvider.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.Security.MySQLRoleProvider.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.Security.MySqlWebSecurity.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.SessionState.MySqlSessionStateStore.datasource" />
+    <None Include="Properties\DataSources\MySql.Web.SiteMap.MySqlSiteMapProvider.datasource" />
+    <None Include="Properties\DataSources\MySqlX.Protocol.ProtocolBase.datasource" />
+    <None Include="Properties\DataSources\MySqlX.Serialization.JsonParser.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.BaseSession.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Client.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Collection.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Common.BaseResult.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Common.ErrorInfo.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Common.Result.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Common.WarningInfo.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.CRUD.AddStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.CRUD.CreateCollectionIndexStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.CRUD.DocResult.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.CRUD.FindStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.CRUD.ModifyStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.CRUD.RemoveStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.DatabaseObject.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.DbDoc.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Iterator.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.MySqlExpression.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.MySQLX.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.MySqlXConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.Column.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.InternalRowResult.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.Row.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.RowResult.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.SqlResult.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.SqlStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.Table.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.TableDeleteStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.TableInsertStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.TableSelectStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Relational.TableUpdateStatement.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Schema.datasource" />
+    <None Include="Properties\DataSources\MySqlX.XDevAPI.Session.datasource" />
+    <None Include="Properties\DataSources\normalMenu.datasource" />
+    <None Include="Properties\DataSources\POS_system.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\POS_system.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminicontool1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normalicontool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_clean3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lineT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direction1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pos_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edituser_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printbarcode_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adminmenubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editstoredata_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editdatastaff_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportselling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baradmin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_chat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_product_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trolley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_genalate_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_product_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_shop_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_MyUser_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_Product_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sketchbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_product_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_loginmenubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acount1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acount2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode_print_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_printbarcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_addtocart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_cancelreceipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send_Message_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_menu_chat11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_sell_menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receiver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
